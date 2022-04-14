@@ -1,4 +1,4 @@
-# "Text-Based Hotel Review Retrieval System"
+# Text-Based Hotel Review Retrieval System
 
  "IR_Project_Group40.pdf" consists of the Report of our project. <br /> <br />
  "Models" Folder consists of our models we ran as baselines. <br />
