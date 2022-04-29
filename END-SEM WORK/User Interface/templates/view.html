@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <title>Hotel Review</title>
+</head>
+
+<body>
+
+  <h2 class="h2" style="text-align:center; margin-top:3%;margin-bottom:3%; padding:10px;">
+    Hotel Review
+  </h2>
+
+  <div class="container " style="max-width:100%;">
+    <div style="width: 100%">
+      <div class="row gx-5">
+        <div class="col-12  col-sm-12 col-xs-12 p-4 " style="text-align:center;max-width:50%;margin:auto">
+          <div class="bg-light p-1">
+            <h4 class=" h4 m-1">Please Input below Details</h4>
+            <hr />
+            <form name="myform" method="post" action="/">
+              <label> Select Location</label>
+              <br />
+              <select id="location" name="location">
+                {% for rt in locationlist %}
+                <option value="{{rt}}">{{rt}}</option>
+                {% endfor %}
+              </select>
+              <br><label> Please Input your query</label><br />
+              <input type="text" name="query" required>
+              </select>
+              <br><input type="submit" id="form_submit"> </input><br />
+
+            </form>
+          </div>
+        </div>
+      </div>
+      <div style="width: 100%">
+        <div class="col-12  col-sm-12 col-xs-12 p-4 " style="text-align:center;max-width:100%;margin:auto">
+          <div class="bg-light p-1">
+            <h4 class=" h4 m-1">Results</h4>
+            <hr />
+            <table rules="all">
+              <tr>
+                <th>Name</th>
+                <th>Location</th>
+                <th>Service</th>
+                <th>Cleaniness</th>
+                <th>Room</th>
+                <th>value</th>
+                <th>Overall</th>
+              </tr>
+              {% for key,value in data.items() %}
+              <tr>
+                <td style="text-align:center" class="col-md-2">{{ value[6] }}</td>
+                <td style="text-align:center" class="col-md-2">{{ value[0] }}</td>
+                <td style="text-align:center" class="col-md-2">{{ value[1] }}</td>
+                <td style="text-align:center" class="col-md-2">{{ value[2] }}</td>
+                <td style="text-align:center" class="col-md-2">{{ value[3] }}</td>
+                <td style="text-align:center" class="col-md-2">{{ value[4] }}</td>
+                <td style="text-align:center" class="col-md-2">{{ value[5] }}</td>
+              </tr>
+              {% endfor %}
+              </tr>
+            </table>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <script>
+    var form = document.getElementById("form_submit");
+    form.addEventListener("submit", my_func, true);
+    var my_func = function (event) {
+      event.preventDefault();
+    };
+  </script>
+
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
