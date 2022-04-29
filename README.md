@@ -2,10 +2,14 @@
 
 # END-SEM WORK Folder consists of our final project submitted for end-sem evaluation <br /> 
  "IR_Project_Group40_Final.pdf" consists of the Final Report of our project. <br />
- "Testing_diff_models.ipynb" consists of our evaluation of different models on our processed dataset. <br />
- "IR_Proj_Final.ipynb" consists of our Final ipnyb file from preprocessing to taking query. <br />
+ "Testing_diff_models.ipynb" is .ipynb file for running models on larger dataset(500k reviews) <br />
+ "IR_Proj_Final.ipynb" is Final ipnyb file from aspect segmentation to ranking of hotels. <br />
 
-
+ "User Interface" directory consists of code for the User Interface and Flask App <br />
+  Heroku Link for accessing project: https://hotel-review-ir.herokuapp.com/ <br /> <br />
+Drive Link: https://drive.google.com/drive/u/1/folders/1o1eEImxseF1eo3tTtlEqrR6jaNr2b2TQ
+ 
+ 
 # These Files and Folders were submitted for our Mid-term evaluation <br /> 
  "IR_Project_Group40.pdf" consists of the Report of our project. <br /> <br />
  "Models" Folder consists of our models we ran as baselines. <br />
